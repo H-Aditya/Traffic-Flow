@@ -4,18 +4,18 @@ from keras.models import Sequential
 from numpy import loadtxt
 
 
-def get_lstm(units):
+def lstm_model(units):
 
     model = Sequential()
     model.add(LSTM(units[1], input_shape=(units[0], 1), return_sequences=True))
     model.add(LSTM(units[2]))
-    model.add(Dropout(0.2))
-    model.add(Dense(units[3], activation='sigmoid'))
+    model.add(Dropout(0.1))
+    model.add(Dense(units[3], activation='relu'))
 
     return model
 
 
-def get_cnn():
+def cnn_model():
 
     model = Sequential()
 

@@ -40,9 +40,8 @@ These are the details for the traffic flow prediction experiment.
 
 | Metrics | MAE | MSE | RMSE | MAPE |  R2  | Explained variance score |
 | ------- |:---:| :--:| :--: | :--: | :--: | :----------------------: |
-| LSTM | 7.21 | 98.05 | 9.90 | 16.56% | 0.9396 | 0.9419 |
-| GRU | 7.20 | 99.32 | 9.97| 16.78% | 0.9389 | 0.9389|
-| SAEs | 7.06 | 92.08 | 9.60 | 17.80% | 0.9433 | 0.9442 |
+| LSTM | 7.56 | 107.47 | 10.36 | 17.93% | 0.9338 | 0.9390 |
+| CNN | 7.51 | 105.63 | 10.27| 19.97 | 0.9349 | 0.9366|
 
 ![evaluate](/results.png)
 

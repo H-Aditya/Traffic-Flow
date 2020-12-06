@@ -40,21 +40,15 @@ def train_cnn(model, x_train, y_train, name):
 
 def lstm(x_train, y_train):
     x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
-    m = model.get_lstm([12, 64, 64, 1])
+    m = model.lstm_model([12, 128 , 64, 1])
     train_lstm(m, x_train, y_train, "lstm")
 
 def cnn(x_train, y_train):
     x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
-    m = model.get_cnn()
+    m = model.cnn_model()
     train_cnn(m, x_train, y_train, "cnn")
 
 def main():
-    # parser = argparse.ArgumentParser()
-    # parser.add_argument(
-    #     "--model",
-    #     default="cnn",
-    #     help="Model to train.")
-    # args = parser.parse_args()
 
     lag = 12
     training_data = 'datasets/train.csv'

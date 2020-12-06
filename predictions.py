@@ -83,8 +83,6 @@ def main():
     y_preds = []
     for name, model in zip(names, models):
         x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
-        # file = 'images/' + name + '.png'
-        # plot_model(model, to_file=file, show_shapes=True)
         predicted = model.predict(x_test)
         predicted = scaler.inverse_transform(predicted.reshape(-1, 1)).reshape(1, -1)[0]
         y_preds.append(predicted[:288])
